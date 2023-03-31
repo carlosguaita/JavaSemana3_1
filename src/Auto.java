@@ -1,16 +1,34 @@
 public class Auto {
 
-    String placa;
-    String modelo;
-    int anio;
-    String marca;
+    private String placa;
+    private String modelo;
+    private int anio;
+    private String marca;
 
-    Motor motor;
+    private Motor motor;
 
-    Duenio duenio;
+    private Duenio duenio;
 
-    int numRuedas;
+    private int numRuedas;
 
+
+    public Auto(){
+
+    }
+
+    public Auto(String placa, String modelo, String marca, Motor motor, Duenio duenio, int numRuedas){
+        this.placa=placa;
+        this.modelo=modelo;
+        this.marca=marca;
+        this.motor=motor;
+        this.duenio=duenio;
+        this.numRuedas=numRuedas;
+    }
+
+    public Auto(Motor motor, Duenio duenio) {
+        this.motor = motor;
+        this.duenio = duenio;
+    }
 
     double velocidad(int a){
         double velocidadKmh=0;
@@ -28,5 +46,59 @@ public class Auto {
         return velocidadKmh;
     }
 
+    public String getPlaca() {
+        return placa;
+    }
 
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public int getAnio() {
+        return anio;
+    }
+
+    public void setAnio(int anio) {
+        this.anio = anio;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public Motor getMotor() {
+        return motor;
+    }
+
+    public void setMotor(Motor motor) {
+        this.motor = motor;
+    }
+
+    public Duenio getDuenio() {
+        return duenio;
+    }
+
+    public void setDuenio(Duenio duenio) {
+        this.duenio = duenio;
+    }
+
+    public int getNumRuedas() {
+        return numRuedas;
+    }
+
+    public void setNumRuedas(int numRuedas) {
+        this.numRuedas = numRuedas;
+    }
 }
